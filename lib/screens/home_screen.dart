@@ -1,6 +1,7 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:task_manager/models/image_stack.dart';
 import '../services/api_service.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,12 +14,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final ApiService apiService = ApiService();
   late Future<List<dynamic>> tasks;
-
-  List<String> images = [
-    'assets/boy.png',
-    'assets/boy.png',
-    'assets/boy.png',
-  ];
 
   @override
   void initState() {
@@ -61,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     side: BorderSide(color: Colors.grey.shade300),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(16.0),
+                    padding: EdgeInsets.fromLTRB(16, 16, 7, 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -173,7 +168,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               },
                             ),
                             Text('1'),
-                            SizedBox(width: 70),
+                            Spacer(),
+                            StackImage(),
                           ],
                         )
                       ],
