@@ -27,6 +27,7 @@ Before running the app, ensure your system meets the following requirements:
    - [√] Android toolchain (Android SDK version 35.0.0)
    - [√] Android Studio (version 2024.2)
    - [√] Visual Studio Code (version 1.96.3)
+   - [√] JDK 17
 
 ---
 
